@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "fc02045f-c719-4b1b-ad8c-359a0708f28c",
+		"name": "Luxury Wear",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31370436",
+		"_collection_link": "https://backend-9752.postman.co/workspace/backend-Workspace~81436d71-bfab-4f69-80c6-0fe7a676020f/collection/31370436-fc02045f-c719-4b1b-ad8c-359a0708f28c?action=share&source=collection_link&creator=31370436"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "GET - ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/products",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RES - NO CONTENT",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/products",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Oct 2024 14:14:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ok\": true,\n    \"message\": \"No products found\",\n    \"data\": \"Empty list\"\n}"
+						},
+						{
+							"name": "RES - ALL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/products",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Oct 2024 14:16:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ok\": true,\n    \"message\": \"Products found\",\n    \"data\": [\n        {\n            \"productId\": 1,\n            \"name\": \"Product 1\",\n            \"description\": \"Description 1\",\n            \"material\": \"Material 1\",\n            \"color\": \"Color 1\",\n            \"designer\": \"Designer 1\",\n            \"price\": 100,\n            \"images\": [\n                {\n                    \"imageId\": 1,\n                    \"url\": \"image1.jpg\"\n                },\n                {\n                    \"imageId\": 2,\n                    \"url\": \"image2.jpg\"\n                },\n                {\n                    \"imageId\": 3,\n                    \"url\": \"image3.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 2,\n            \"name\": \"Product 2\",\n            \"description\": \"Description 2\",\n            \"material\": \"Material 2\",\n            \"color\": \"Color 2\",\n            \"designer\": \"Designer 2\",\n            \"price\": 200,\n            \"images\": [\n                {\n                    \"imageId\": 4,\n                    \"url\": \"image4.jpg\"\n                },\n                {\n                    \"imageId\": 5,\n                    \"url\": \"image5.jpg\"\n                },\n                {\n                    \"imageId\": 6,\n                    \"url\": \"image6.jpg\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GET - ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/products/1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RES - ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/products/1",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Oct 2024 14:33:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ok\": true,\n    \"message\": \"Product found\",\n    \"data\": {\n        \"productId\": 1,\n        \"name\": \"Product 1\",\n        \"description\": \"Description 1\",\n        \"material\": \"Material 1\",\n        \"color\": \"Color 1\",\n        \"designer\": \"Designer 1\",\n        \"price\": 100,\n        \"images\": [\n            {\n                \"imageId\": 1,\n                \"url\": \"image1.jpg\"\n            },\n            {\n                \"imageId\": 2,\n                \"url\": \"image2.jpg\"\n            },\n            {\n                \"imageId\": 3,\n                \"url\": \"image3.jpg\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "RES - NOT FOUND",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/products/13",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"products",
+										"13"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Oct 2024 14:34:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ok\": false,\n    \"message\": \"Product not found\",\n    \"data\": \"Product not found not found: (id: 13)\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET - RANDOM",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/products/random",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"products",
+								"random"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RES - RANDOM",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/products/random",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"products",
+										"random"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Oct 2024 14:48:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ok\": true,\n    \"message\": \"Random products found\",\n    \"data\": [\n        {\n            \"productId\": 4,\n            \"name\": \"Product 4\",\n            \"description\": \"Description 4\",\n            \"material\": \"Material 4\",\n            \"color\": \"Color 4\",\n            \"designer\": \"Designer 4\",\n            \"price\": 400,\n            \"images\": [\n                {\n                    \"imageId\": 10,\n                    \"url\": \"image10.jpg\"\n                },\n                {\n                    \"imageId\": 11,\n                    \"url\": \"image11.jpg\"\n                },\n                {\n                    \"imageId\": 12,\n                    \"url\": \"image12.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 10,\n            \"name\": \"Product 10\",\n            \"description\": \"Description 10\",\n            \"material\": \"Material 10\",\n            \"color\": \"Color 10\",\n            \"designer\": \"Designer 10\",\n            \"price\": 1000,\n            \"images\": [\n                {\n                    \"imageId\": 28,\n                    \"url\": \"image28.jpg\"\n                },\n                {\n                    \"imageId\": 29,\n                    \"url\": \"image29.jpg\"\n                },\n                {\n                    \"imageId\": 30,\n                    \"url\": \"image30.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 9,\n            \"name\": \"Product 9\",\n            \"description\": \"Description 9\",\n            \"material\": \"Material 9\",\n            \"color\": \"Color 9\",\n            \"designer\": \"Designer 9\",\n            \"price\": 900,\n            \"images\": [\n                {\n                    \"imageId\": 25,\n                    \"url\": \"image25.jpg\"\n                },\n                {\n                    \"imageId\": 26,\n                    \"url\": \"image26.jpg\"\n                },\n                {\n                    \"imageId\": 27,\n                    \"url\": \"image27.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 6,\n            \"name\": \"Product 6\",\n            \"description\": \"Description 6\",\n            \"material\": \"Material 6\",\n            \"color\": \"Color 6\",\n            \"designer\": \"Designer 6\",\n            \"price\": 600,\n            \"images\": [\n                {\n                    \"imageId\": 16,\n                    \"url\": \"image16.jpg\"\n                },\n                {\n                    \"imageId\": 17,\n                    \"url\": \"image17.jpg\"\n                },\n                {\n                    \"imageId\": 18,\n                    \"url\": \"image18.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 8,\n            \"name\": \"Product 8\",\n            \"description\": \"Description 8\",\n            \"material\": \"Material 8\",\n            \"color\": \"Color 8\",\n            \"designer\": \"Designer 8\",\n            \"price\": 800,\n            \"images\": [\n                {\n                    \"imageId\": 22,\n                    \"url\": \"image22.jpg\"\n                },\n                {\n                    \"imageId\": 23,\n                    \"url\": \"image23.jpg\"\n                },\n                {\n                    \"imageId\": 24,\n                    \"url\": \"image24.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 11,\n            \"name\": \"Product 11\",\n            \"description\": \"Description 11\",\n            \"material\": \"Material 11\",\n            \"color\": \"Color 11\",\n            \"designer\": \"Designer 11\",\n            \"price\": 1100,\n            \"images\": [\n                {\n                    \"imageId\": 31,\n                    \"url\": \"image31.jpg\"\n                },\n                {\n                    \"imageId\": 32,\n                    \"url\": \"image32.jpg\"\n                },\n                {\n                    \"imageId\": 33,\n                    \"url\": \"image33.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 1,\n            \"name\": \"Product 1\",\n            \"description\": \"Description 1\",\n            \"material\": \"Material 1\",\n            \"color\": \"Color 1\",\n            \"designer\": \"Designer 1\",\n            \"price\": 100,\n            \"images\": [\n                {\n                    \"imageId\": 1,\n                    \"url\": \"image1.jpg\"\n                },\n                {\n                    \"imageId\": 2,\n                    \"url\": \"image2.jpg\"\n                },\n                {\n                    \"imageId\": 3,\n                    \"url\": \"image3.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 7,\n            \"name\": \"Product 7\",\n            \"description\": \"Description 7\",\n            \"material\": \"Material 7\",\n            \"color\": \"Color 7\",\n            \"designer\": \"Designer 7\",\n            \"price\": 700,\n            \"images\": [\n                {\n                    \"imageId\": 19,\n                    \"url\": \"image19.jpg\"\n                },\n                {\n                    \"imageId\": 20,\n                    \"url\": \"image20.jpg\"\n                },\n                {\n                    \"imageId\": 21,\n                    \"url\": \"image21.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 12,\n            \"name\": \"Product 12\",\n            \"description\": \"Description 12\",\n            \"material\": \"Material 12\",\n            \"color\": \"Color 12\",\n            \"designer\": \"Designer 12\",\n            \"price\": 1200,\n            \"images\": [\n                {\n                    \"imageId\": 34,\n                    \"url\": \"image34.jpg\"\n                },\n                {\n                    \"imageId\": 35,\n                    \"url\": \"image35.jpg\"\n                },\n                {\n                    \"imageId\": 36,\n                    \"url\": \"image36.jpg\"\n                }\n            ]\n        },\n        {\n            \"productId\": 3,\n            \"name\": \"Product 3\",\n            \"description\": \"Description 3\",\n            \"material\": \"Material 3\",\n            \"color\": \"Color 3\",\n            \"designer\": \"Designer 3\",\n            \"price\": 300,\n            \"images\": [\n                {\n                    \"imageId\": 7,\n                    \"url\": \"image7.jpg\"\n                },\n                {\n                    \"imageId\": 8,\n                    \"url\": \"image8.jpg\"\n                },\n                {\n                    \"imageId\": 9,\n                    \"url\": \"image9.jpg\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "http://localhost:8080/api/v1",
+			"type": "string"
+		}
+	]
+}
